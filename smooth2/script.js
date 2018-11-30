@@ -3,6 +3,23 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
+document.addEventListener('keydown', function(event) {
+    //ON W, A, ArrowLeft, ArrowUp GO UP IF POSSIBLE
+    if (
+        event.which == 87 || event.keyCode == 87 || event.which == 38 || event.keyCode == 38 || event.which == 65 || event.keyCode == 65 || event.which == 37 || event.keyCode == 37)
+    {
+        TryUp();
+    }
+    //ON S, D, ArrowRight, ArrowDown GO DOWN IF POSSIBLE
+    else if(
+        event.which == 83 || event.keyCode == 83 || event.which == 40 || event.keyCode == 40 || event.which == 68 || event.keyCode == 68 || event.which == 39 || event.keyCode == 39)
+    {
+        TryDown();
+    }
+
+
+}, false);
+
 //Init variables.
 let buttons = document.getElementsByClassName('navbuttons');
 let sections = document.getElementsByClassName('sectionPage');
@@ -31,6 +48,19 @@ function goTo() {
 //gets the position away from the Top for the right section.
 function getSectionTop(i) {
    return document.getElementsByClassName('sectionPage')[i].offsetTop;
+}
+
+//if possible go Up
+function TryUp() {
+    if (currentSection!=0){
+        goUp();
+    }
+}
+//if possible go down
+function TryDown() {
+    if (currentSection!=3){
+        goDown();
+    }
 }
 
 //goes one section up and updates the header class.
