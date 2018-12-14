@@ -1,6 +1,6 @@
 
 let animatedBoxes = document.getElementsByClassName('animated');
-const timeBetweenInSeconds = 0.35;
+const timeBetweenInSeconds = 0.1;
 
 
 function startAnimation() {

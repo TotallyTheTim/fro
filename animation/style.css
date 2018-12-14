@@ -38,21 +38,17 @@ body{margin: 0}
     margin: 15px auto;
     font-size: 130px;
     opacity: 0;
-    transform: translateX(500px) scale(0.5);
-    transition: ease-in-out 0.8s;
-    filter: blur(25px);
+    transform: translateX(500px) scale(0.2);
+    transition: ease-in-out 0.5s;
+    filter: blur(15px);
 }
 .right{
     opacity: 1;
     filter: none;
     transform: none;
-    transition: ease-in-out 3.8s;
+    transition: ease-in-out 1.5s;
 }
-.gone{
-    transform: scale(3);
-    filter: blur(100px);
-    opacity: 0;
-}
+
 #animationArea{
     padding: 10px;
     margin-left: 0;
