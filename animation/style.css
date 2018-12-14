@@ -1,33 +1,32 @@
 body{margin: 0}
 
-label{
+#container{
     margin: 15px;
     display: block;
     width: 50px;
     height: 50px;
     overflow: hidden;
 }
-label > div{
+#container > div{
      width: 100%;
      height: 10px;
      background: black;
     transition: .4s ease-in-out;
     border-radius: 5px;
  }
-label > div:nth-child(2){
+#container > div:nth-child(2){
     margin: 10px auto;
 }
-#hamburger{display: none}
-#hamburger:checked ~ label > div {background: darkred}
+.change > div {background: darkred !important;}
 
-#hamburger:checked ~ label > div:nth-child(1){
+.change > div:nth-child(1){
     transform: translateY(20px) scale(1.2) rotate(45deg);
 }
-#hamburger:checked ~ label > div:nth-child(2){
+.change > div:nth-child(2){
     transform: scale(0.6);
     opacity: 0;
 }
-#hamburger:checked ~ label > div:nth-child(3){
+.change > div:nth-child(3){
     transform: translateY(-20px) scale(1.2) rotate(-45deg);
 }
 
@@ -59,6 +58,16 @@ label > div:nth-child(2){
     margin-left: 0;
     margin-top: 3em;
     overflow: hidden;
-    /*width: max-content;*/
     background: lightgray;
+}
+
+#validatie a{
+    width: max-content;
+    height: max-content;
+}
+#validatie img {
+    height: 0.25em;
+    width: auto;
+    border: 0;
+    margin: .3em;
 }

@@ -1,15 +1,7 @@
 
 let animatedBoxes = document.getElementsByClassName('animated');
-let checkbox = document.getElementById("hamburger");
 const timeBetweenInSeconds = 0.35;
 
-checkbox.addEventListener( 'change', function() {
-    if(this.checked) {
-        startAnimation();
-    } else {
-        stopAnimation();
-    }
-});
 
 function startAnimation() {
     let i;
@@ -33,4 +25,13 @@ function addRight(i){
 }
 function removeRight(i){
     animatedBoxes[i].classList.remove('right');
+}
+
+function hamburger(x) {
+    x.classList.toggle("change");
+    if (x.classList.contains("change")){
+        startAnimation();
+    } else {
+        stopAnimation();
+    }
 }
