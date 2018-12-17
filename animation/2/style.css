@@ -1,0 +1,70 @@
+body{margin: 0}
+
+#container{
+    margin: 15px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+#container > div{
+    width: 100%;
+    height: 10px;
+    background: black;
+    transition: .4s ease-in-out;
+    border-radius: 5px;
+}
+#container > div:nth-child(2){
+    margin: 10px auto;
+}
+.change > div {background: darkred !important;}
+
+.change > div:nth-child(1){
+    transform: translateY(20px) scale(1.2) rotate(45deg);
+}
+.change > div:nth-child(2){
+    transform: scale(0.6);
+    opacity: 0;
+}
+.change > div:nth-child(3){
+    transform: translateY(-20px) scale(1.2) rotate(-45deg);
+}
+
+.animated{
+    display: inline-block;
+    background: #000000;
+    color: white;
+    padding: 15px 16.5px;
+    width: max-content;
+    margin: 15px auto;
+    font-size: 130px;
+    opacity: 0;
+    transform: translateX(500px) scale(0.2);
+    transition: ease-in-out 0.5s;
+    filter: blur(15px);
+}
+.right{
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: ease-in-out 1.5s;
+}
+
+#animationArea{
+    padding: 10px;
+    margin-left: 0;
+    margin-top: 3em;
+    overflow: hidden;
+    background: darkseagreen;
+}
+
+#validatie a{
+    width: max-content;
+    height: max-content;
+}
+#validatie img {
+    height: 0.25em;
+    width: auto;
+    border: 0;
+    margin: .3em;
+}
